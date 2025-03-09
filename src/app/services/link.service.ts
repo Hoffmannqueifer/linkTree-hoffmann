@@ -21,11 +21,11 @@ export class LinkService {
     try{
       let pages = await Pages.getPages();
       return pages.map((page: any) =>{
-      const pageExistsOutside = page.attributeValues?.['pages-exists-outside']?.value || false;
+      const pageExistsOutside = page.attributeValues?.['page-exists-outside']?.value || false;
       let extractedUrl = page.pageUrl;
       if(pageExistsOutside){
         const urlFormatted = page.localizeInfos?.['htmlContent']?.replace(/^<p>|<\/p>$/g, '') || '';
-      const extractedUrl = urlFormatted.match(/https?:\/\/[^\s"<>]+/)[0];
+        extractedUrl = urlFormatted.match(/https?:\/\/[^\s"<>]+/)[0];
       }
 
 
