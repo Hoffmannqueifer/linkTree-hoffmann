@@ -10,7 +10,7 @@ html, body {
   flex-direction: column;
   justify-content: space-between; /* Garante que o footer fique no final */
   align-items: center;
-  height: 100%; /* Isso faz a wrapper ocupar 100% da altura da tela */
+  min-height: 100vh; /* Isso garante que a wrapper ocupe pelo menos 100% da altura da tela */
   background: rgb(4, 2, 13);
   background: linear-gradient(0deg, rgba(4, 2, 13, 0.95) 12%, rgba(172, 5, 14, 0.94) 100%);
 }
@@ -24,7 +24,8 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Isso garante que o conteúdo do main fique centralizado */
-  flex: 1; /* Isso permite que o conteúdo se expanda para preencher o espaço restante */
+  flex-grow: 1; /* Isso permite que o conteúdo se expanda para preencher o espaço restante */
+  min-height: 0; /* Impede que o conteúdo ultrapasse a altura da tela */
 }
 
 /* Estilos para a seção user-info */
@@ -46,6 +47,7 @@ p {
   font-size: 16px;
   margin: 0;
   color: #ddd; /* Cor mais suave para o texto */
+  text-align: justify; /* Justificar o texto */
 }
 
 /* Imagem do usuário */
@@ -56,8 +58,11 @@ img {
   object-fit: cover; /* Garante que a imagem se ajuste ao tamanho sem deformar */
 }
 
-footer{
+/* Footer */
+footer {
   color: #373737;
   padding: 24px 0;
   font-size: 12px;
+  text-align: center; /* Centraliza o texto do footer */
+  width: 100%; /* Garante que o footer ocupe toda a largura */
 }

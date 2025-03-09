@@ -1,8 +1,5 @@
 <ul class="linklist">
-  <li>
-    <a href="">Linkedin</a>
-  </li>
-  <li>
-    <a href="">teste de linkar</a>
+  <li *ngFor="let link of links">
+    <a *ngIf="link.isVisible" [href]="link.url" [target]="link.isExternal ? '_blank' : '_self'">{{ link.title }}</a>
   </li>
 </ul>
