@@ -1,0 +1,27 @@
+.linklist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding: 0;
+  list-style: none; /* Remove os marcadores padrão de lista */
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #373737;
+  background-color: white;
+  padding: 24px 12px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  display: block; /* Garante que o link ocupe toda a largura do li */
+}
+
+a:hover {
+  background-color: #f0f0f0; /* Efeito de hover com fundo suave */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /* Aumenta a sombra ao passar o mouse */
+  color: #333; /* Muda a cor do texto no hover para contraste */
+  transform: scale(1.05); /* Aumenta o tamanho do botão */
+}
